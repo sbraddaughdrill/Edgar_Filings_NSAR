@@ -36,45 +36,45 @@ Location <- 1
 
 if (Location == 1) {
   #setwd("C:/Research_temp3/")
-  input_directory <- normalizePath("C:/Users/S.Brad/Dropbox/Research/Fund_Letters/Data",winslash="\\", mustWork=TRUE)
+  #input_directory <- normalizePath("C:/Users/S.Brad/Dropbox/Research/Fund_Letters/Data",winslash="\\", mustWork=TRUE)
   output_directory <- normalizePath("F:/Research_temp3",winslash="\\", mustWork=TRUE)
   function_directory <- normalizePath("C:/Users/S.Brad/Dropbox/Research_Methods/R", winslash = "\\", mustWork = TRUE)
-  treetag_directory <- normalizePath("C:/TreeTagger",winslash="\\", mustWork=TRUE)    
+  #treetag_directory <- normalizePath("C:/TreeTagger",winslash="\\", mustWork=TRUE)    
   
 } else if (Location == 2) {
   #setwd("C:/Research_temp3/")
-  input_directory <- normalizePath("C:/Users/bdaughdr/Dropbox/Research/Fund_Letters/Data",winslash="\\", mustWork=TRUE)
+  #input_directory <- normalizePath("C:/Users/bdaughdr/Dropbox/Research/Fund_Letters/Data",winslash="\\", mustWork=TRUE)
   output_directory <- normalizePath("C:/Research_temp3",winslash="\\", mustWork=TRUE)
   function_directory <- normalizePath("C:/Users/bdaughdr/Dropbox/Research_Methods/R",winslash="\\", mustWork=TRUE) 
-  treetag_directory <- normalizePath("C:/TreeTagger",winslash="\\", mustWork=TRUE)    
+  #treetag_directory <- normalizePath("C:/TreeTagger",winslash="\\", mustWork=TRUE)    
   
 } else if (Location == 3) {
   #setwd("C:/Research_temp3/")
-  input_directory <- normalizePath("C:/Users/S.Brad/Dropbox/Research/Fund_Letters/Data",winslash="\\", mustWork=TRUE)
+  #input_directory <- normalizePath("C:/Users/S.Brad/Dropbox/Research/Fund_Letters/Data",winslash="\\", mustWork=TRUE)
   output_directory <- normalizePath("C:/Research_temp3",winslash="\\", mustWork=TRUE)
   function_directory <- normalizePath("C:/Users/S.Brad/Dropbox/Research_Methods/R", winslash = "\\", mustWork = TRUE)
-  treetag_directory <- normalizePath("C:/TreeTagger",winslash="\\", mustWork=TRUE)  
+  #treetag_directory <- normalizePath("C:/TreeTagger",winslash="\\", mustWork=TRUE)  
   
 } else if (Location == 4) {
   #setwd("//tsclient/C/Research_temp3/")
-  input_directory <- normalizePath("H:/Research/Mutual_Fund_Letters/Data", winslash = "\\", mustWork = TRUE)
+  #input_directory <- normalizePath("H:/Research/Mutual_Fund_Letters/Data", winslash = "\\", mustWork = TRUE)
   output_directory <- normalizePath("C:/Users/bdaughdr/Documents/Research_temp3",winslash="\\", mustWork=TRUE)
   function_directory <- normalizePath("//tsclient/C/Users/S.Brad/Dropbox/Research_Methods/R", winslash = "\\", mustWork = TRUE)
-  treetag_directory <- normalizePath("//tsclient/C/TreeTagger",winslash="\\", mustWork=TRUE)    
+  #treetag_directory <- normalizePath("//tsclient/C/TreeTagger",winslash="\\", mustWork=TRUE)    
   
 } else if (Location == 5) {
   #setwd("//tsclient/C/Research_temp3/")
-  input_directory <- normalizePath("H:/Research/Mutual_Fund_Letters/Data", winslash = "\\", mustWork = TRUE)
+  #input_directory <- normalizePath("H:/Research/Mutual_Fund_Letters/Data", winslash = "\\", mustWork = TRUE)
   output_directory <- normalizePath("C:/Users/bdaughdr/Documents/Research_temp3",winslash="\\", mustWork=TRUE)
   function_directory <- normalizePath("//tsclient/C/Users/bdaughdr/Dropbox/Research_Methods/R", winslash = "\\", mustWork = TRUE)
-  treetag_directory <- normalizePath("//tsclient/C/TreeTagger",winslash="\\", mustWork=TRUE)       
+  #treetag_directory <- normalizePath("//tsclient/C/TreeTagger",winslash="\\", mustWork=TRUE)       
   
 } else if (Location == 6) {
   #setwd("//tsclient/C/Research_temp2/")
-  input_directory <- normalizePath("H:/Research/Mutual_Fund_Letters/Data", winslash = "\\", mustWork = TRUE)
+  #input_directory <- normalizePath("H:/Research/Mutual_Fund_Letters/Data", winslash = "\\", mustWork = TRUE)
   output_directory <- normalizePath("C:/Research_temp3",winslash="\\", mustWork=TRUE)
   function_directory <- normalizePath("//tsclient/C/Users/S.Brad/Dropbox/Research_Methods/R", winslash = "\\", mustWork = TRUE)
-  treetag_directory <- normalizePath("//tsclient/C/TreeTagger",winslash="\\", mustWork=TRUE)         
+  #treetag_directory <- normalizePath("//tsclient/C/TreeTagger",winslash="\\", mustWork=TRUE)         
   
 } else {
   cat("ERROR ASSIGNING DIRECTORIES", "\n")
@@ -104,7 +104,7 @@ external_packages <- c("data.table","gdata","plyr","reshape2","stringr","XML")
 invisible(unlist(sapply(external_packages,load_external_packages, repo_str=repo, simplify=FALSE, USE.NAMES=FALSE)))
 installed_packages <- list_installed_packages(external_packages)
 
-rm(installed_packages)
+rm(installed_packages,external_packages,repo)
 
 
 ###############################################################################
